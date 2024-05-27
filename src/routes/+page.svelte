@@ -46,11 +46,11 @@
 	}
 </script>
 
-<div class="grid min-h-full min-w-full grid-cols-4 gap-3 p-4">
+<div class="grid min-h-full min-w-full grid-cols-4 gap-3 p-4 pt-14">
 	{#each sounds as sound}
 		<Toggle
 			aria-label="toggle bold"
-			class={`flex min-h-36 min-w-36 flex-col items-center gap-3 border capitalize data-[state=on]:text-[#31b9ce]
+			class={`flex min-h-36 min-w-36 flex-col items-center gap-3 border capitalize data-[state=on]:text-[#3584e4]
 				${isDragging ? 'pointer-events-none' : ''}
 			`}
 			disabled={isDragging}
