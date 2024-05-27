@@ -29,3 +29,14 @@ export function stop(id: string) {
 		(sound.howl as Howl).stop(); // Add type assertion to access the 'stop' method
 	}
 }
+
+export function setVolume(id: string, volume: number) {
+	const sound = sounds.find((sound) => sound.id === id);
+	if (!sound) {
+		console.error('Sound not found:', id);
+		return;
+	}
+	if (sound.howl) {
+		(sound.howl as Howl).volume(volume); // Add type assertion to access the 'volume' method
+	}
+}
