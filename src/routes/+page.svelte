@@ -21,8 +21,10 @@
 		Droplets,
 		Waves,
 		Moon,
-		Sun
+		Sun,
+		Github
 	} from 'lucide-svelte';
+	import { openLink } from '$lib/utils';
 	const iconComponents = {
 		CloudRain,
 		Bird,
@@ -96,6 +98,15 @@
 				class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
 			/>
 			<span class="sr-only">Toggle theme</span>
+		</Button>
+	</div>
+	<div class=" fixed bottom-4 right-4">
+		<Button
+			on:click={() => openLink('https://github.com/n3-rd/ibora')}
+			variant="outline"
+			size="icon"
+		>
+			<Github class="h-[1.2rem] w-[1.2rem]" />
 		</Button>
 	</div>
 </div>

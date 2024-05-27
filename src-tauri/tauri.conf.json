@@ -19,11 +19,18 @@
 				"unmaximize": true,
 				"minimize": true,
 				"close": true
+			},
+			"shell": {
+				"all": false,
+				"execute": false,
+				"open": true,
+				"scope": [],
+				"sidecar": false
 			}
 		},
 		"bundle": {
 			"active": true,
-			"category": "DeveloperTool",
+			"category": "Utility",
 			"copyright": "",
 			"deb": {
 				"depends": []
@@ -36,7 +43,7 @@
 				"icons/icon.icns",
 				"icons/icon.ico"
 			],
-			"identifier": "com.tauri.dev",
+			"identifier": "com.n3rd.ibora",
 			"longDescription": "",
 			"macOS": {
 				"entitlements": null,
@@ -65,7 +72,7 @@
 				"fullscreen": false,
 				"height": 600,
 				"resizable": true,
-				"title": "stauri",
+				"title": "Ibora",
 				"width": 800,
 				"decorations": false
 			}
