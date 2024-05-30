@@ -2,10 +2,12 @@
 
 ![Ohun](https://raw.githubusercontent.com/n3-rd/ibora/main/src-tauri/icons/app-icon.png)
 
-## _A synced lyrics provider for Linux_
+## _Improve focus and increase your productivity by listening to different sounds._
 
 Inspired by the [Blanket](https://github.com/rafaelmardojai/blanket/) app, Improve focus and increase your productivity by listening to different sounds. Or allows you to fall asleep in a noisy environment.
 Built with [Tauri](https://tauri.app/) and [Sveltekit](https://kit.svelte.dev/).
+
+![App preview](https://i.postimg.cc/RVj78DZJ/image.png)
 
 ## Features
 
