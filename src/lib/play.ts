@@ -1,6 +1,7 @@
 import { Howl } from 'howler';
 import { sounds } from './sounds';
 import { platform } from '@tauri-apps/api/os';
+import { isPlaying } from './stores/play-store';
 
 export async function play(id: string) {
 	const sound = sounds.find((sound) => sound.id === id);
@@ -60,3 +61,34 @@ export function setVolume(id: string, volume: number) {
 		(sound.howl as Howl).volume(volume); // Add type assertion to access the 'volume' method
 	}
 }
+
+export function pauseAllSounds() {
+	for (const sound of sounds) {
+		if (sound.howl) {
+			(sound.howl as Howl).pause();
+		}
+	}
+}
+
+export function resumeAllSounds() {
+	for (const sound of sounds) {
+		if (sound.howl) {
+			(sound.howl as Howl).play();
+		}
+	}
+}
+
+export function isAnySoundPlaying(): boolean {
+	for (const sound of sounds) {
+		if (sound.howl && (sound.howl as Howl).playing()) {
+			isPlaying.set(true);
+			return true;
+		}
+	}
+	isPlaying.set(false);
+	return false;
+}
+
+setInterval(() => {
+	isAnySoundPlaying();
+}, 500);
